@@ -4,6 +4,7 @@ import { IDatabaseConfig } from './interfaces/dbConfig.interface';
 dotenv.config();
 
 export const databaseConfig: IDatabaseConfig = {
+  // TODO: REFACTOR ENV
   development: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
