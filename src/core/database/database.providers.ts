@@ -8,12 +8,13 @@ export const databaseProviders = [
     provide: SEQUELIZE,
     useFactory: async () => {
       let config;
+
       if (process.env.APP_ENV) {
         config = databaseConfig.config;
       }
 
       const sequelize = new Sequelize(config);
-      sequelize.addModels(['models goes here']);
+      sequelize.addModels(['Models wil be added here!']);
       await sequelize.sync();
       return sequelize;
     },
