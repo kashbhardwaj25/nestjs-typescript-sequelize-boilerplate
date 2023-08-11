@@ -9,7 +9,5 @@ export interface IDatabaseConfigAttributes {
 }
 
 export interface IDatabaseConfig {
-  qa: IDatabaseConfigAttributes;
-  beta: IDatabaseConfigAttributes;
-  base: IDatabaseConfigAttributes;
+  config: IDatabaseConfigAttributes;
 }
