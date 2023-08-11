@@ -9,7 +9,7 @@ export const databaseConfig: IDatabaseConfig = {
   qa: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
-    database: process.env.DB_NAME_DEVELOPMENT,
+    database: process.env.DB_NAME_QA,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     dialect: process.env.DB_DIALECT,
@@ -17,7 +17,7 @@ export const databaseConfig: IDatabaseConfig = {
   beta: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
-    database: process.env.DB_NAME_TEST,
+    database: process.env.DB_NAME_BETA,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     dialect: process.env.DB_DIALECT,
@@ -25,7 +25,7 @@ export const databaseConfig: IDatabaseConfig = {
   base: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
-    database: process.env.DB_NAME_PRODUCTION,
+    database: process.env.DB_NAME_BASE,
     host: process.env.DB_HOST,
     dialect: process.env.DB_DIALECT,
   },
