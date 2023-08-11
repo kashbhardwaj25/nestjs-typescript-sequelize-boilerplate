@@ -1,4 +1,4 @@
 export const SEQUELIZE = 'SEQUELIZE';
-export const DEVELOPMENT = 'development';
-export const TEST = 'test';
-export const PRODUCTION = 'production';
+export const QA = 'qa';
+export const BETA = 'beta';
+export const BASE = 'base';

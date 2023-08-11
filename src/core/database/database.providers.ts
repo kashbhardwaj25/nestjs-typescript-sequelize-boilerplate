@@ -1,25 +1,25 @@
 import { Sequelize } from 'sequelize-typescript';
 
 import { databaseConfig } from './database.config';
-import { SEQUELIZE, DEVELOPMENT, TEST, PRODUCTION } from '../../constants';
+import { SEQUELIZE, QA, BETA, BASE } from '../../constants';
 
 export const databaseProviders = [
   {
     provide: SEQUELIZE,
     useFactory: async () => {
       let config;
-      switch (process.env.NODE_ENV) {
-        case DEVELOPMENT:
-          config = databaseConfig.development;
+      switch (process.env.APP_ENV) {
+        case QA:
+          config = databaseConfig.qa;
           break;
-        case TEST:
-          config = databaseConfig.test;
+        case BETA:
+          config = databaseConfig.beta;
           break;
-        case PRODUCTION:
-          config = databaseConfig.production;
+        case BASE:
+          config = databaseConfig.base;
           break;
         default:
-          config = databaseConfig.development;
+          config = databaseConfig.qa;
       }
       const sequelize = new Sequelize(config);
       sequelize.addModels(['models goes here']);

@@ -1,11 +1,12 @@
 import * as dotenv from 'dotenv';
+
 import { IDatabaseConfig } from './interfaces/dbConfig.interface';
 
 dotenv.config();
 
 export const databaseConfig: IDatabaseConfig = {
   // TODO: REFACTOR ENV
-  development: {
+  qa: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME_DEVELOPMENT,
@@ -13,7 +14,7 @@ export const databaseConfig: IDatabaseConfig = {
     port: process.env.DB_PORT,
     dialect: process.env.DB_DIALECT,
   },
-  test: {
+  beta: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME_TEST,
@@ -21,7 +22,7 @@ export const databaseConfig: IDatabaseConfig = {
     port: process.env.DB_PORT,
     dialect: process.env.DB_DIALECT,
   },
-  production: {
+  base: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME_PRODUCTION,
